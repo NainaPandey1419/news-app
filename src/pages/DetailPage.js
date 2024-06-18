@@ -46,13 +46,13 @@ const DetailPage = () => {
   }
 
   return (
-    <div>
+    <div className='detail'>
       <h1>{article.title}</h1>
       <img src={article.urlToImage} alt={article.title} 
       />
       <p>{article.content}</p>
       <p>
-        <a href={article.url} target="_blank" rel="noopener noreferrer">
+        <a  className='read' href={article.url} target="_blank" rel="noopener noreferrer">
           Read the full article
         </a>
       </p>
