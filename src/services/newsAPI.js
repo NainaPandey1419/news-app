@@ -1,7 +1,6 @@
-// src/services/newsAPI.js
 import axios from "axios";
 
-const API_KEY = "350d2b320bf6423486f933876fd2733e";
+const API_KEY = "b61fd4de0fdf4c2eb1fa5741fc381522";
 const BASE_URL = "https://newsapi.org/v2";
 
 const newsAPI = axios.create({

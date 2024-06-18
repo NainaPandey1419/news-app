@@ -1,17 +1,16 @@
-// src/features/newsSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Define your API key and base URL
-const API_KEY = "350d2b320bf6423486f933876fd2733e";
+const API_KEY = "b61fd4de0fdf4c2eb1fa5741fc381522";
 const BASE_URL = "https://newsapi.org/v2";
 
-// Create an async thunk for fetching news data
-export const fetchNews = createAsyncThunk("news/fetchNews", async (category = null) => {
+// An async thunk for fetching news data
+export const fetchNews = createAsyncThunk("news/fetchNews", async (params) => {
+  const { category = null, searchQuery = null } = params || {};
   const response = await axios.get(`${BASE_URL}/top-headlines`, {
     params: {
       country: "us",
-      category: category,
+      category: category || null,
       apiKey: API_KEY,
     },
   });
@@ -24,9 +23,6 @@ const newsSlice = createSlice({
     articles: [],
     loading: false,
     error: null,
-  },
-  reducers: {
-    // Add any additional reducers you need
   },
   extraReducers: (builder) => {
     builder

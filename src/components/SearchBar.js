@@ -8,8 +8,8 @@ const SearchBar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    dispatch(fetchNews({ searchQuery })); // Dispatching action with searchQuery
-    setSearchQuery(''); // Resetting searchQuery state after dispatch
+    dispatch(fetchNews({ searchQuery })); 
+    setSearchQuery(''); 
   };
 
   return (

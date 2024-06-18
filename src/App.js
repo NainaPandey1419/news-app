@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
 import ArticleDetails from "./components/ArticleDetails";
+import './App.css';
 
 const App = () => {
   return (

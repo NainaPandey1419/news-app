@@ -1,38 +1,112 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #beafde;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  font-size: 36px;
+  color: #362525;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4d3434;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.category-filter {
+  margin-bottom: 20px;
+}
+
+.category-filter button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #ded826;
+  border: 1px solid #db7f7f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-filter button.active {
+  background-color: #436386 !important;
+  color: #fff;
+}
+
+.article-card {
+  background-color: hsl(128, 71%, 34%);
+  border: 1px solid #35b338;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.article-card img {
+  max-width: 200px;
+  max-height: 120px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.article-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.article-card p {
+  margin-bottom: 0;
+}
+
+.pagination {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.favorites {
+  margin-top: 40px;
+}
+
+.favorites h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }

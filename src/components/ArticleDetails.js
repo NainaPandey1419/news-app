@@ -11,7 +11,7 @@ const ArticleDetails = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`API_ENDPOINT/article/${articleId}`); // Replace 'API_ENDPOINT' with your actual API endpoint
+        const response = await axios.get(`https://newsapi.org/v2/article/${articleId}`); 
         setArticle(response.data);
       } catch (error) {
         setError('Error fetching article details');
@@ -39,7 +39,9 @@ const ArticleDetails = () => {
     <div>
       <h1>{article.title}</h1>
       <p>{article.publishedAt}</p>
-      <img src={article.urlToImage} alt={article.title} />
+      {article.urlToImage && (
+        <img src={article.urlToImage} alt={article.title} style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '20px 0' }} />
+      )}
       <p>{article.content}</p>
       <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
     </div>

@@ -10,35 +10,11 @@ const CategoryFilter = () => {
   };
 
   return (
-    <div className="btn-group mb-3" role="group" aria-label="Category Filter">
-      <button
-        type="button"
-        className="btn btn-outline-primary"
-        onClick={() => handleCategoryChange(null)}
-      >
-        All
-      </button>
-      <button
-        type="button"
-        className="btn btn-outline-primary"
-        onClick={() => handleCategoryChange('business')}
-      >
-        Business
-      </button>
-      <button
-        type="button"
-        className="btn btn-outline-primary"
-        onClick={() => handleCategoryChange('technology')}
-      >
-        Technology
-      </button>
-      <button
-        type="button"
-        className="btn btn-outline-primary"
-        onClick={() => handleCategoryChange('entertainment')}
-      >
-        Entertainment
-      </button>
+    <div className="category-filter">
+      <button onClick={() => handleCategoryChange(null)}>All</button>
+      <button onClick={() => handleCategoryChange('business')}>Business</button>
+      <button onClick={() => handleCategoryChange('technology')}>Technology</button>
+      <button onClick={() => handleCategoryChange('entertainment')}>Entertainment</button>
     </div>
   );
 };
