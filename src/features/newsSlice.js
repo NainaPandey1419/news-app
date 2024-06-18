@@ -6,7 +6,7 @@ const BASE_URL = "https://newsapi.org/v2";
 
 // An async thunk for fetching news data
 export const fetchNews = createAsyncThunk("news/fetchNews", async (params) => {
-  const { category = null, searchQuery = null } = params || {};
+  const { category = null } = params || {};
   const response = await axios.get(`${BASE_URL}/top-headlines`, {
     params: {
       country: "us",
